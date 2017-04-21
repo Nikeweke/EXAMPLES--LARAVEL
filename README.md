@@ -28,6 +28,8 @@
 * [**Composer**](#composer)
 * [**PHPUnit**](#phpunit)
 * [**Laravel Excel**](#laravel-excel)
+* [**Debugbar**](#Debugbar)
+* [**Iseed**](#Iseed)
 
 --- 
 
@@ -337,8 +339,66 @@ use Illuminate\Support\Facades\Input;
 
   })->download('xls');;
  }
-      
-      
+    
+  
 ```
+
+## [Debugbar](https://laravel-news.com/laravel-debugbar)
+* Установка
+```
+composer require barryvdh/laravel-debugbar --dev
+```
+* в config/app.php
+```
+'Barryvdh\Debugbar\ServiceProvider',  // in providers array
+'Debugbar' => 'Barryvdh\Debugbar\Facade', // in aliases array
+```
+
+###### Сообщения
+```
+use Debugbar;
+
+Debugbar::info($object);
+Debugbar::error('Error!');
+Debugbar::warning('Watch out…');
+Debugbar::addMessage('Another message', 'mylabel');
+```
+
+###### Время засекает
+```
+use Debugbar;
+
+Debugbar::startMeasure('render','Time for rendering');
+Debugbar::stopMeasure('render');
+Debugbar::addMeasure('now', LARAVEL_START, microtime(true));
+Debugbar::measure('My long operation', function() {
+// Do something…
+});
+
+```
+
+## [ISeed](https://github.com/orangehill/iseed)
+* Установка
+```
+composer require orangehill/iseed --dev
+```
+* в config/app.php
+```
+Orangehill\Iseed\IseedServiceProvider::class,  // in providers array
+```
+
+Создает на основе подключенной БД сиды таблиц из нее
+###### Пример
+```
+REM (На основе текущей таблицы(Users) из БД построит сид - UsersTableSeeder.php )
+php artisan iseed users
+
+php artisan iseed users, another_table
+
+php artisan iseed users --force
+```
+
+
+
                                                   
 
