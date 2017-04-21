@@ -28,8 +28,8 @@
 * [**Composer**](#composer)
 * [**PHPUnit**](#phpunit)
 * [**Laravel Excel**](#laravel-excel)
-* [**Debugbar**](#Debugbar)
-* [**Iseed**](#Iseed)
+* [**Debugbar**](#debugbar)
+* [**Iseed**](#iseed)
 
 --- 
 
