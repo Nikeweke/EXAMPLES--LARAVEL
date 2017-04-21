@@ -30,6 +30,7 @@
 * [**Laravel Excel**](#laravel-excel)
 * [**Debugbar**](#debugbar)
 * [**Iseed**](#iseed)
+* [**IMigrations**](#imigrations)
 
 --- 
 
@@ -396,6 +397,26 @@ php artisan iseed users
 php artisan iseed users, another_table
 
 php artisan iseed users --force
+```
+
+## [IMigrations](https://github.com/Xethron/migrations-generator)
+* Установка
+```
+composer require --dev "xethron/migrations-generator"
+```
+* в config/app.php
+```
+ // in providers array
+'Way\Generators\GeneratorsServiceProvider',  
+'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider', 
+```
+
+###### Пример
+```
+REM Делает все миграции по всем таблам
+php artisan migrate:generate
+
+php artisan migrate:generate table_name
 ```
 
 
