@@ -25,6 +25,7 @@
 * [**Middleware**](#middleware)
 * [**Сессии**](#Сессии)
 * [**Cookies**](#cookies)
+* [**Traits**](#traits)
 * [**Composer**](#composer)
 * [**PHPUnit**](#phpunit)
 * [**Laravel Excel**](#laravel-excel)
@@ -162,6 +163,39 @@ return  response($resData)->cookie($cookie)->cookie($cookie1); // возврат
 
 // Del cookie
 Cookie::forget('name');
+
+```
+
+## Traits
+Трейт (англ. trait) - это механизм обеспечения повторного использования кода в языках с поддержкой единого наследования, 
+таких как PHP. Трейт очень похож на класс, но предназначен для групирования функционала хорошо структурированым и
+последовательным образом. Невозможно создать самостоятельный экземпляр трейта. Это дополнение к обычному наследованию 
+и позволяет сделать горизонтальную композицию поведения, то есть применение членов класса без необходимости наследования. 
+
+###### traits.php
+```php
+trait MyTrait
+{
+  public function Bye()
+   { echo "Its method from trait - Bye()"; }
+
+}
+```
+
+
+###### index.php
+```php
+class A {
+    
+    // including Traits.php
+    use MyTrait;
+
+   function Hello(){ echo "Its A method - Hello()"; }
+}
+
+$some = new A;
+$some->Hello();
+$some->Bye();
 
 ```
 
