@@ -26,7 +26,7 @@
 * [**Middleware**](#middleware)
 * [**Session**](#session)
 * [**Cookies**](#cookies)
-* [**Composer**](#composer)
+* [**Troubles-Resolves**](#troubles-resolves)
 
 --- 
 
@@ -195,13 +195,8 @@ $some->Bye();
 ```
 
 
-## Composer
-* **link_to_route()** - how to enable (HTML Laravel Collective)
-  - в composer.js после - "laravel/framework": "5.2.", надо дописать :   `"laravelcollective/html": "~5.0"`    
-  - написать в cmd(предварительно перейти в папку где лежит 'artisan') : `php composer.phar update`    
-  - открыть config/app.php, там найти массив **providers**  в конец которого добавить :                    `'Collective\Html\HtmlServiceProvider'`   
-  - в том же файле в массив **aliases** - в конец - `'Form' => 'Collective\Html\FormFacade',`     
-                                              `'Html' => 'Collective\Html\HtmlFacade',`   
+## Troubles-Resolves
+
 * **Если при** запуске миграции, не видит новоиспеченную миграцию: `composer dump-autoload -o`        
 
 
