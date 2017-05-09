@@ -8,7 +8,7 @@
 * [**IMigrations**](#imigrations)
 
 
-## PHPUnit
+### PHPUnit
 1. Создание теста: `cmd> php artisan make:test UserTest`
 2. Тесты находяться: **./tests** 
 3. Запуск тестов:
