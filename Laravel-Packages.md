@@ -254,8 +254,10 @@ php artisan migrate:generate table_name
 
 ## [LaravelCollective - HTML](https://packagist.org/packages/laravelcollective/html)
 **link_to_route()** - how to enable (HTML Laravel Collective)
-  - в composer.js после - "laravel/framework": "5.2.", надо дописать :   `"laravelcollective/html": "~5.0"`    
-  - написать в cmd(предварительно перейти в папку где лежит 'artisan') : `php composer.phar update`    
+  ```
+   composer require laravelcollective/html
+  ```
+ 
   - открыть config/app.php, там найти массив **providers**  в конец которого добавить :   
   ###### config/app.php
   ```php
