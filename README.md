@@ -5,19 +5,20 @@
  composer create-project --prefer-dist laravel/laravel my_app
 ```
 
-#### Запуск проекта после скачки с репозитория:
+##### Запуск проекта после скачки с репозитория:
 1. в папке с проектом : `composer update` или `composer update --no-dev` (при условии что нет папки **vendor**)
 2. файл для БД - **.env**
 3. php artisan serve
 
 
-####  Адреса курса и документации:
+#####  Адреса курса и документации:
 * [Дмитрий А.](https://www.youtube.com/watch?v=Iqvjb9bhocA&list=PLoonZ8wII66h7pF6CFPzK3pVhTWo3DL9G&index=12)
 * [laravel.su](http://laravel.su/docs/5.2/quickstart#introduction)
 * [Курс по Laravel](https://www.youtube.com/watch?v=c_uDG9_2iJA&list=PLBT2g0kDwD_a_MFg1N2ibEHodJwRiD8AT&index=1)
 
 --- 
 
+#### Содержание 
 * [**Комманды Artisan**](#kомманды-artisan)
 * [**SQL & Eloquent(Tricks)**](#sql--eloquenttricks)
 * [**Localization**](#localization)
