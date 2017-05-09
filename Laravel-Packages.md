@@ -6,7 +6,7 @@
 * [**Debugbar**](#debugbar)
 * [**Iseed**](#iseed)
 * [**IMigrations**](#imigrations)
-* [**LaravelCollective - HTML**](#laravelcollective-html)
+* [**LaravelCollective - HTML**](#laravelcollective---html)
 
 ## PHPUnit
 1. Создание теста: `cmd> php artisan make:test UserTest`
