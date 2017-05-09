@@ -23,15 +23,9 @@
 * [**Localization**](#localization)
 * [**Шаблонизатор(Blade)**](#Шаблонизаторblade)
 * [**Middleware**](#middleware)
-* [**Сессии**](#Сессии)
+* [**Session**](#session)
 * [**Cookies**](#cookies)
-* [**Traits**](#traits)
 * [**Composer**](#composer)
-* [**PHPUnit**](#phpunit)
-* [**Laravel Excel**](#laravel-excel)
-* [**Debugbar**](#debugbar)
-* [**Iseed**](#iseed)
-* [**IMigrations**](#imigrations)
 
 --- 
 
