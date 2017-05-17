@@ -10,6 +10,23 @@
 2. файл для БД - **.env**
 3. php artisan serve
 
+##### Laravel 5.4 - gives error when MIGRATE this shit , solve it take that :
+```php
+// app/Providers/AppServiceProvider.php
+class AppServiceProvider extends ServiceProvider
+{
+  /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+
+```
+
 
 #####  Адреса курса и документации:
 * [Дмитрий А.](https://www.youtube.com/watch?v=Iqvjb9bhocA&list=PLoonZ8wII66h7pF6CFPzK3pVhTWo3DL9G&index=12)
