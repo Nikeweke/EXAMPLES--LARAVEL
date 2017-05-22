@@ -18,4 +18,10 @@
     */
     Backpack\Base\BaseServiceProvider::class,
    ```
+   + **3.** - 
+   ```
+   php artisan vendor:publish --provider="Backpack\Base\BaseServiceProvider" #publishes configs, langs, views and AdminLTE files
+   php artisan vendor:publish --provider="Prologue\Alerts\AlertsServiceProvider" # publish config for notifications - prologue/alerts
+   php artisan migrate #generates users table (using Laravel's default migrations)
+   ```
 
