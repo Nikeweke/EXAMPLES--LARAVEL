@@ -1,11 +1,18 @@
 ## Backpack
 
+##### [Гайд по установке](https://laravel-backpack.readme.io/docs/installation-on-laravel-53)
+
 ### Содержание
-* **Установка**
+* **Создание CRUD**
 
 
 ---
 
-### [Установка](https://laravel-backpack.readme.io/docs/installation-on-laravel-53)
+### Создание CRUD
+```
+php artisan backpack:crud Post # Makes controller, Request, model
+```
+
+
  
 
