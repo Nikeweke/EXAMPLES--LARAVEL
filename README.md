@@ -11,7 +11,7 @@
 2. файл для БД - **.env**
 3. php artisan serve
 
-##### Laravel 5.4 - gives error when MIGRATE this shit , solve it take that :
+##### Laravel 5.4 - gives error when MIGRATE , solve it like that :
 ```php
 // app/Providers/AppServiceProvider.php
 class AppServiceProvider extends ServiceProvider
