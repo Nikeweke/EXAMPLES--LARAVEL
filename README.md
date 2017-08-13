@@ -3,6 +3,7 @@
 #### Создание проекта
 ``` 
  composer create-project --prefer-dist laravel/laravel my_app
+ composer create-project laravel/laravel your-project-name 5.3.*
 ```
 
 ##### Запуск проекта после скачки с репозитория:
