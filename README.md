@@ -166,13 +166,16 @@ if(Session::has('users'))
 use Cookie;
 ...
 // Get cookie
+$request->cookie('name');
 Cookie::get('name');
 Cookie::get('name', 'default');
 
 // Create cookie
 $cookie  = cookie('name', value, 2880); // делаем куки
-$cookie1 = cookie('name', value, 2880); // делаем куки
-return  response($resData)->cookie($cookie)->cookie($cookie1); // возврат ответа + куки
+$cookie1 = Cookie::make('name', value, 2880); // делаем куки (needs - use Cookie;)
+
+return  response($resData)->cookie($cookie)->cookie($cookie1); // без возврата ответки куки не поставяться 
+return redirect()->back()->cookie($cookie);                     // без возврата ответки куки не поставяться 
 
 // Del cookie
 Cookie::forget('name');
