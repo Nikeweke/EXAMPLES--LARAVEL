@@ -43,7 +43,6 @@ php artisan serve
 
 
 ##  Kомманды Artisan
-###### *в папке с проектом GitBash и вперед...*
 * **php artisan serve** - запуск сервера
 * **php artisan make:controller NameController** - Создать контроллер
 * **php artisan make:model task** - Создать модель
