@@ -1,42 +1,10 @@
 # Laravel
 
-#### Создание проекта
-``` 
- composer create-project --prefer-dist laravel/laravel my_app
- composer create-project laravel/laravel your-project-name 5.3.*
-```
-
-##### Запуск проекта после скачки с репозитория:
-1. в папке с проектом : `composer update` или `composer update --no-dev` (при условии что нет папки **vendor**)
-2. файл для БД - **.env**
-3. php artisan serve
-
-##### Laravel 5.4 - gives error when MIGRATE , solve it like that :
-```php
-// app/Providers/AppServiceProvider.php
-class AppServiceProvider extends ServiceProvider
-{
-  /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        Schema::defaultStringLength(191);
-    }
-
-```
-
-
-#####  Адреса курса и документации:
-* [Дмитрий А.](https://www.youtube.com/watch?v=Iqvjb9bhocA&list=PLoonZ8wII66h7pF6CFPzK3pVhTWo3DL9G&index=12)
-* [laravel.su](http://laravel.su/docs/5.2/quickstart#introduction)
-* [Курс по Laravel](https://www.youtube.com/watch?v=c_uDG9_2iJA&list=PLBT2g0kDwD_a_MFg1N2ibEHodJwRiD8AT&index=1)
-
---- 
-
 #### Содержание 
+* **Quick start**
+* **Запуск проекта после скачки с репозитория**
+* **Полезные пакеты**
+* **Tutorials and docs**
 * [**Комманды Artisan**](#kомманды-artisan)
 * [**SQL & Eloquent(Tricks)**](#sql--eloquenttricks)
 * [**Localization**](#localization)
@@ -44,9 +12,34 @@ class AppServiceProvider extends ServiceProvider
 * [**Middleware**](#middleware)
 * [**Session**](#session)
 * [**Cookies**](#cookies)
-* [**Troubles-Resolves**](#troubles-resolves)
+* [**Troubles-Resolves**](#troubles-resolves
 
 --- 
+
+## Quick start
+``` 
+# Создание проекта
+composer create-project --prefer-dist laravel/laravel my_app
+composer create-project laravel/laravel your-project-name 5.3.*
+
+cd my_app
+composer install
+php artisan serve
+```
+
+## Запуск проекта после скачки с репозитория:
+1. в папке с проектом : `composer update` или `composer update --no-dev` (при условии что нет папки **vendor**)
+2. файл для БД - **.env**
+3. php artisan serve
+
+## Полезные пакеты
+* [Laravel Excel](https://github.com/Nikeweke/Laravel-Excel)
+* [Laravel Lang](https://github.com/Nikeweke/Laravel-lang) - перевод на разные языкы сообщений приложения
+
+## Tutorials and docs
+* [Дмитрий А.](https://www.youtube.com/watch?v=Iqvjb9bhocA&list=PLoonZ8wII66h7pF6CFPzK3pVhTWo3DL9G&index=12)
+* [laravel.su](http://laravel.su/docs/5.2/quickstart#introduction)
+* [Курс по Laravel](https://www.youtube.com/watch?v=c_uDG9_2iJA&list=PLBT2g0kDwD_a_MFg1N2ibEHodJwRiD8AT&index=1)
 
 
 ##  Kомманды Artisan
@@ -216,9 +209,26 @@ $some->Bye();
 ```
 
 
-## Troubles-Resolves
+## Проблемы и решения 
 
-* **Если при** запуске миграции, не видит новоиспеченную миграцию: `composer dump-autoload -o`        
+**1)** Если при запуске миграции, не видит новоиспеченную миграцию:
+> `composer dump-autoload -o`        
+
+**2** Ошибка при миграции версия `5.4`. Как решить?
+```php
+// app/Providers/AppServiceProvider.php
+class AppServiceProvider extends ServiceProvider
+{
+  /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Schema::defaultStringLength(191);
+    }
+```
 
 
                                                   
