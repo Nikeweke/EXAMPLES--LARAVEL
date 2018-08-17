@@ -12,12 +12,12 @@
 * [**Middleware**](#middleware)
 * [**Session**](#session)
 * [**Cookies**](#cookies)
-* [**Troubles-Resolves**](#troubles-resolves
+* **Проблемы и решения**
 
 --- 
 
 ## Quick start
-``` 
+```bash
 # Создание проекта
 composer create-project --prefer-dist laravel/laravel my_app
 composer create-project laravel/laravel your-project-name 5.3.*
