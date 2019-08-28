@@ -1,4 +1,4 @@
-# Laravel
+# Examples - Laravel
 
 #### Содержание 
 * **Quick start**
